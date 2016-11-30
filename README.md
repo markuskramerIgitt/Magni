@@ -1,25 +1,20 @@
-
-
-File distribution without relay servers.
-
 Motivation:
-My experience on a wide corporate network with many very weak links is that despite (and partially due to) many relay servers, file distribution is slow, hard to predict or even unreliable.
+On a wide and disperse corporate network, despite (and partially due to) many relay servers, file distribution may be slow, hard to predict or even unreliable.
 
-
-Feature wish list (aka requirements):
-- File distribution is centrally managed: a client must neither initiate nor deny transmissions.
-- Files are copied in segments from and to clients.
-- Distribution of data and status gathering must scale well.
-- A local copy is preferred over a remote copy.
+Features:
+- Centrally managed data distribution (a client can neither initiate nor deny distribution).
+- Parallel command issueing and status gathering.
+- Auto-scaling data distribution (capacity increases with demand).
+- Data is copied in segments from and to clients.
 
 
 Main components:
- - [libtorrent](http://libtorrent.org) offers "auto-scaling" distribution: throughput increases with increased demand.  
- - [Salt](http://docs.saltstack.com) offers signalling, reporting and remote execution.
+ - [Salt](http://docs.saltstack.com) for remote execution, signalling and reporting.
+ - [libtorrent](http://libtorrent.org) for auto-scale distribution.
 
 Differences to "vanilla" BitTorrent Peer-to-peer:
- - Only authorized system administrators can add torrents and initiate copying.
- - Client always share, no tit for tat. Exceptions (e.g. behind VPN or a metered connection) are centrally defined.
+ - Only authorized system administrators can transfer and remove content.
+ - No tit for tat, a client always share. Exceptions (e.g. behind VPN or a metered connection) are centrally defined.
 
 Comments welcome.
 
