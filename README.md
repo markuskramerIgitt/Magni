@@ -1,12 +1,11 @@
 Motivation:
 On a wide and disperse corporate network, despite (and partially due to) many relay servers, file distribution may be slow, hard to predict or even unreliable.
 
-Features:
-- Centrally managed data distribution (a client can neither initiate nor deny distribution).
+Goals:
+- Centrally managed, a client can neither initiate nor deny data distribution.
 - Parallel command issueing and status gathering.
 - Auto-scaling data distribution (capacity increases with demand).
-- Data is copied in segments from and to clients.
-
+- Data is copied in segments between clients.
 
 Main components:
  - [Salt](http://docs.saltstack.com) for remote execution, signalling and reporting.
@@ -24,7 +23,15 @@ Markus ([LinkedIn](https://www.linkedin.com/pub/markus-kramer/5/908/94b))
 
 ***
 
+Similar techniques:
+ - Microsoft [(2015)](https://technet.microsoft.com/en-us/library/mt613461.aspx) [(2010)](https://technet.microsoft.com/en-us/library/dd755969%28WS.10%29.aspx) BranchCache
+ - [Microsoft Peer Caching](https://msdn.microsoft.com/en-us/library/aa964314%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) turned into BranchCache
+ - [Proactive network provider participation for P2P (P4P)](https://en.wikipedia.org/wiki/Proactive_network_provider_participation_for_P2P)
+ - [Microsoft (2013?) Pando Networks](http://en.wikipedia.org/wiki/Pando_Networks)
 
+***
+
+ 
 Similar projects:
  - [Facebook (2010)](http://torrentfreak.com/facebook-uses-bittorrent-and-they-love-it-100625/)
  - [Twitter (2010)](https://blog.twitter.com/2010/murder-fast-datacenter-code-deploys-using-bittorrent)
@@ -35,16 +42,6 @@ Similar projects:
  - [Ziemer SmallSync (German)](http://www.ziemers.de/software/standardsoftware/smallsync/index.html)
  - [Build 10036 of Windows 10](http://www.neowin.net/news/windows-10-future-updates-can-be-delivered-via-p2p)
  
-
-
-***
-
-Similar techniques:
- - Microsoft [(2015)](https://technet.microsoft.com/en-us/library/mt613461.aspx) [(2010)](https://technet.microsoft.com/en-us/library/dd755969%28WS.10%29.aspx) BranchCache
- - [Microsoft Peer Caching](https://msdn.microsoft.com/en-us/library/aa964314%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) turned into BranchCache
- - [Proactive network provider participation for P2P (P4P)](https://en.wikipedia.org/wiki/Proactive_network_provider_participation_for_P2P)
- - [Microsoft (2013?) Pando Networks](http://en.wikipedia.org/wiki/Pando_Networks)
-
 
 ***
 
