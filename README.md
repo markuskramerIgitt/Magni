@@ -3,12 +3,12 @@ On a wide and disperse corporate network, despite (and partially due to) many re
 
 Goals:
 - Centrally managed, a client can neither initiate nor deny data distribution.
-- Parallel command issueing and status gathering.
+- Parallel command issuing and status gathering.
 - Auto-scaling data distribution (capacity increases with demand).
 - Data is copied in segments between clients.
 
 Main components:
- - [Salt](http://docs.saltstack.com) for remote execution, signalling and reporting.
+ - [Salt](http://docs.saltstack.com) for remote execution, signaling and reporting.
  - [libtorrent](http://libtorrent.org) for auto-scale distribution.
 
 Differences to "vanilla" BitTorrent Peer-to-peer:
